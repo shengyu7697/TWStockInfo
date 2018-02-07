@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+</head>
+<body>
+
+<script>
+function submit2(id) {
+    document.getElementById("text1").value = id;
+    submit();
+}
+
+function submit() {
+    var stock_id = document.getElementById("text1").value;
+    var content = "";
+    
+    if (stock_id == "") {
+        content += "no input stock id" ;
+    } else {
+        content += '<b>Yahoo股市</b></br>';
+    	content += '<a href="https://tw.stock.yahoo.com/d/s/company_' + stock_id + '.html" target="_blank">公司資料</a></br>';
+        content += '<a href="https://tw.stock.yahoo.com/q/h?s=' + stock_id + '" target="_blank">個股新聞</a></br>';
+        content += '<a href="https://tw.stock.yahoo.com/q/q?s=' + stock_id + '" target="_blank">當日股價</a></br>';
+        content += '<a href="https://tw.stock.yahoo.com/q/ta?s=' + stock_id + '" target="_blank">歷史股價k線圖</a></br>';
+        
+        content += '</br><b>GoodInfo</b></br>';
+        content += '<a href="http://goodinfo.tw/stockinfo/StockBzPerformance.asp?STOCK_ID=' + stock_id + '" target="_blank">經營績效</a></br>';
+        content += '<a href="http://goodinfo.tw/stockinfo/StockDividendPolicy.asp?STOCK_ID=' + stock_id + '" target="_blank">歷年股利</a></br>';
+        content += '<a href="https://goodinfo.tw/StockInfo/StockFinDetail.asp?RPT_CAT=BS_M_QUAR&STOCK_ID=' + stock_id + '" target="_blank">資產負債表 (季)</a></br>';
+        content += '<a href="https://goodinfo.tw/StockInfo/StockFinDetail.asp?RPT_CAT=IS_M_QUAR_ACC&STOCK_ID=' + stock_id + '" target="_blank">損益表 (季)</a></br>';
+content += '<a href="https://goodinfo.tw/StockInfo/ShowBuySaleChart.asp?STOCK_ID=' + stock_id + '&CHT_CAT=DATE" target="_blank">法人買賣</a></br>';
+
+        content += '</br><b>CMoney</b></br>';
+        content += '<a href="https://www.cmoney.tw/finance/f00040.aspx?s=' + stock_id + '&o=3" target="_blank">資產負債表 (年)</a></br>';
+        content += '<a href="https://www.cmoney.tw/finance/f00041.aspx?s=' + stock_id + '&o=4" target="_blank">損益表 (年)</a></br>';
+
+        content += '</br><b>鉅亨網</b></br>';
+        content += '<a href="http://www.cnyes.com/twstock/html5chart/' + stock_id + '.htm " target="_blank">HTML5技術線圖</a></br>';
+        content += '<a href="https://www.cnyes.com/twstock/foreignrating/' + stock_id + '.htm " target="_blank">外資評等</a></br>';
+
+        content += '</br><b>MoneyDJ</b></br>';
+        content += '<a href="https://www.moneydj.com/KMDJ/Wiki/WikiViewer.aspx" target="_blank">公司介紹</a></br>';
+    }
+    document.getElementById("output_text").innerHTML = content;
+}
+
+function reset() {
+	document.getElementById("text1").value = "";
+	//alert("123");
+}
+
+function handleKeyEvent(e) {
+    if(e.keyCode === 13) {
+        submit();
+    }
+}
+
+</script>
+<p>
+    <a href="https://tw.stock.yahoo.com/h/kimosel.php" target="_blank">[股票代號查詢]</a>
+    <a href="http://fund.bot.com.tw/z/" target="_blank">[台銀股市資訊網]</a>
+    <a href="http://fund.bot.com.tw/z/zk/zk0/zkmain_2_4.djhtm" target="_blank">[台銀本益比選股]</a>
+    <a href="http://mops.twse.com.tw/mops/web/t78sb04_q2" target="_blank">[0050 0051 0056基金每季持股明細表]</a>
+
+    </br><a>電子</a>
+    <button onclick="submit2(2330)">2330 台積電</button>
+    <button onclick="submit2(2317)">2317 鴻海</button>
+    
+	</br><a>金融</a>
+	<button onclick="submit2(2882)">2882 國泰金</button>
+	<button onclick="submit2(2881)">2881 富邦金</button>
+	<button onclick="submit2(2891)">2891 中信金</button>
+
+	</br><a>電信</a>
+    <button onclick="submit2(2412)">2412 中華電</button>
+    <button onclick="submit2(3045)">3045 台灣大</button>
+    <button onclick="submit2(4904)">4904 遠傳</button>
+
+	</br><a>民生</a>
+	<button onclick="submit2(1216)">1216 統一</button>
+</p>
+
+<p>代號: 
+    <input type="text" id="text1" value="" onkeypress="handleKeyEvent(event)"/>
+    <button onclick="submit()">完成</button>
+    <button onclick="reset()">清除</button>
+</p>
+
+<p id="output_text"></p>
+
+</body>
+</html>

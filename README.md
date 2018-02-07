@@ -21,3 +21,6 @@ TWStockInfo
 
 ## ToDo
 * 支援更多常用的大型龍頭股
+
+## License
+TWStockInfo is published under the MIT license.  

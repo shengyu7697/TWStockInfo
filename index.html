@@ -20,17 +20,17 @@ function submit() {
         content += "no input stock id" ;
     } else {
         content += '<b>Yahoo股市</b></br>';
-    	content += '<a href="https://tw.stock.yahoo.com/d/s/company_' + stock_id + '.html" target="_blank">公司資料</a></br>';
+        content += '<a href="https://tw.stock.yahoo.com/d/s/company_' + stock_id + '.html" target="_blank">公司資料</a></br>';
         content += '<a href="https://tw.stock.yahoo.com/q/h?s=' + stock_id + '" target="_blank">個股新聞</a></br>';
         content += '<a href="https://tw.stock.yahoo.com/q/q?s=' + stock_id + '" target="_blank">當日股價</a></br>';
         content += '<a href="https://tw.stock.yahoo.com/q/ta?s=' + stock_id + '" target="_blank">歷史股價k線圖</a></br>';
-        
+
         content += '</br><b>GoodInfo</b></br>';
         content += '<a href="http://goodinfo.tw/stockinfo/StockBzPerformance.asp?STOCK_ID=' + stock_id + '" target="_blank">經營績效</a></br>';
         content += '<a href="http://goodinfo.tw/stockinfo/StockDividendPolicy.asp?STOCK_ID=' + stock_id + '" target="_blank">歷年股利</a></br>';
         content += '<a href="https://goodinfo.tw/StockInfo/StockFinDetail.asp?RPT_CAT=BS_M_QUAR&STOCK_ID=' + stock_id + '" target="_blank">資產負債表 (季)</a></br>';
         content += '<a href="https://goodinfo.tw/StockInfo/StockFinDetail.asp?RPT_CAT=IS_M_QUAR_ACC&STOCK_ID=' + stock_id + '" target="_blank">損益表 (季)</a></br>';
-content += '<a href="https://goodinfo.tw/StockInfo/ShowBuySaleChart.asp?STOCK_ID=' + stock_id + '&CHT_CAT=DATE" target="_blank">法人買賣</a></br>';
+        content += '<a href="https://goodinfo.tw/StockInfo/ShowBuySaleChart.asp?STOCK_ID=' + stock_id + '&CHT_CAT=DATE" target="_blank">法人買賣</a></br>';
 
         content += '</br><b>CMoney</b></br>';
         content += '<a href="https://www.cmoney.tw/finance/f00040.aspx?s=' + stock_id + '&o=3" target="_blank">資產負債表 (年)</a></br>';
@@ -67,19 +67,29 @@ function handleKeyEvent(e) {
     </br><a>電子</a>
     <button onclick="submit2(2330)">2330 台積電</button>
     <button onclick="submit2(2317)">2317 鴻海</button>
-    
-	</br><a>金融</a>
-	<button onclick="submit2(2882)">2882 國泰金</button>
-	<button onclick="submit2(2881)">2881 富邦金</button>
-	<button onclick="submit2(2891)">2891 中信金</button>
+    <button onclick="submit2(4938)">4938 和碩</button>
+    <button onclick="submit2(2382)">2382 廣達</button>
+    <button onclick="submit2(3231)">3231 緯創</button>
+    <button onclick="submit2(2324)">2324 仁寶</button>
 
-	</br><a>電信</a>
+    </br><a>金融</a>
+    <button onclick="submit2(2882)">2882 國泰金</button>
+    <button onclick="submit2(2881)">2881 富邦金</button>
+    <button onclick="submit2(2891)">2891 中信金</button>
+    <button onclick="submit2(2886)">2886 兆豐金</button>
+    <button onclick="submit2(2892)">2892 第一金</button>
+    <button onclick="submit2(5880)">5880 合庫金</button>
+    <button onclick="submit2(2880)">2880 華南金</button>
+    <button onclick="submit2(2884)">2884 玉山金</button>
+    <button onclick="submit2(2887)">2887 台新金</button>
+
+    </br><a>電信</a>
     <button onclick="submit2(2412)">2412 中華電</button>
     <button onclick="submit2(3045)">3045 台灣大</button>
     <button onclick="submit2(4904)">4904 遠傳</button>
 
-	</br><a>民生</a>
-	<button onclick="submit2(1216)">1216 統一</button>
+    </br><a>民生</a>
+    <button onclick="submit2(1216)">1216 統一</button>
 </p>
 
 <p>代號: 
